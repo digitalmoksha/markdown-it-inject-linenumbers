@@ -1,0 +1,34 @@
+.
+lorem
+.
+<p class="line" data-line="0">lorem</p>
+.
+
+It handle paragraphs
+.
+lorem one
+
+lorem two
+.
+<p class="line" data-line="0">lorem one</p>
+<p class="line" data-line="2">lorem two</p>
+.
+
+It handles headings
+.
+# heading 1
+
+## heading 2
+.
+<h1 class="line" data-line="0">heading 1</h1>
+<h2 class="line" data-line="2">heading 2</h2>
+.
+
+It allows for nested paragraphs
+.
+> lorem
+.
+<blockquote>
+<p class="line" data-line="0">lorem</p>
+</blockquote>
+.
