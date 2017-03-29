@@ -32,3 +32,67 @@ It allows for nested paragraphs
 <p class="source-line" data-source-line="0">lorem</p>
 </blockquote>
 .
+
+It handles unordered lists
+.
+- item one
+- item two
+.
+<ul>
+<li class="source-line" data-source-line="0">item one</li>
+<li class="source-line" data-source-line="1">item two</li>
+</ul>
+.
+
+It handles ordered lists
+.
+1. item one
+2. item two
+.
+<ol>
+<li class="source-line" data-source-line="0">item one</li>
+<li class="source-line" data-source-line="1">item two</li>
+</ol>
+.
+
+It handles unordered lists with embedded paragraphs
+.
+- item one
+- item two
+
+  paragraph
+.
+<ul>
+<li class="source-line" data-source-line="0">
+<p class="source-line" data-source-line="0">item one</p>
+</li>
+<li class="source-line" data-source-line="1">
+<p class="source-line" data-source-line="1">item two</p>
+<p class="source-line" data-source-line="3">paragraph</p>
+</li>
+</ul>
+.
+
+It handles a table
+.
+| Header  | Header  | Header  |
+|---------|---------|---------|
+| example | example | example |
+.
+<table class="source-line" data-source-line="0">
+<thead>
+<tr>
+<th>Header</th>
+<th>Header</th>
+<th>Header</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>example</td>
+<td>example</td>
+<td>example</td>
+</tr>
+</tbody>
+</table>
+.

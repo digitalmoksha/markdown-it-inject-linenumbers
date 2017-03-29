@@ -18,5 +18,8 @@ module.exports = function inject_linenumbers_plugin(md) {
     return slf.renderToken(tokens, idx, options, env, slf);
   }
 
-  md.renderer.rules.paragraph_open = md.renderer.rules.heading_open = injectLineNumbers;
+  md.renderer.rules.paragraph_open = injectLineNumbers;
+  md.renderer.rules.heading_open   = injectLineNumbers;
+  md.renderer.rules.list_item_open = injectLineNumbers;
+  md.renderer.rules.table_open     = injectLineNumbers;
 };

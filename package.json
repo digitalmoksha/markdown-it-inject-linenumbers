@@ -1,6 +1,6 @@
 {
   "name": "markdown-it-inject-linenumbers",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Inject the line numbers to support sync scrolling",
   "keywords": [
     "markdown-it-plugin",

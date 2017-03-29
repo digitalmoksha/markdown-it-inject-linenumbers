@@ -10,6 +10,8 @@ Inline elements are not supported. Only the following block level elements are c
 
 - headings
 - paragraphs
+- list items
+- tables
 
 _This plugin was built using the [markdown-it demo](https://github.com/markdown-it/markdown-it/tree/master/support/demo_template) sync scrolling as a starting point._
 
