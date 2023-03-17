@@ -11,14 +11,13 @@ GITHUB_PROJ := https://github.com//digitalmoksha/${NPM_PACKAGE}
 
 
 lint:
-	./node_modules/.bin/eslint --reset .
+	npm run lint
 
-test: lint
-	./node_modules/.bin/mocha -R spec
+test:
+	npm test
 
 coverage:
-	rm -rf coverage
-	./node_modules/.bin/istanbul cover node_modules/.bin/_mocha
+	npm run coverage
 
 test-ci: lint
 	istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage
@@ -31,7 +30,7 @@ browserify:
 		./node_modules/.bin/browserify ./ -s markdownitInjectLinenumbers \
 		) > dist/markdown-it-inject-linenumbers.js
 	# Minify
-	./node_modules/.bin/uglifyjs dist/markdown-it-inject-linenumbers.js -b beautify=false,ascii-only=true -c -m \
+	./node_modules/.bin/terser dist/markdown-it-inject-linenumbers.js -c -m \
 		--preamble "/*! ${NPM_PACKAGE} ${NPM_VERSION} ${GITHUB_PROJ} @license MIT */" \
 		> dist/markdown-it-inject-linenumbers.min.js
 

@@ -1,7 +1,7 @@
 {
   "name": "markdown-it-inject-linenumbers",
-  "version": "0.2.0",
-  "description": "Inject the line numbers to support sync scrolling",
+  "version": "0.3.0",
+  "description": "Plugin to inject source line numbers to support sync scrolling",
   "keywords": [
     "markdown-it-plugin",
     "markdown-it",
@@ -10,29 +10,26 @@
     "source line numbers"
   ],
   "homepage": "https://github.com/digitalmoksha/markdown-it-inject-linenumbers",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/digitalmoksha/markdown-it-inject-linenumbers.git"
-  },
+  "repository": "digitalmoksha/markdown-it-inject-linenumbers",
   "bugs": {
     "url": "https://github.com/digitalmoksha/markdown-it-inject-linenumbers/issues"
   },
   "license": "MIT",
   "main": "index.js",
   "scripts": {
-    "test": "make test"
+    "lint": "eslint .",
+    "test": "npm run lint && nyc mocha",
+    "coverage": "npm run test && nyc report --reporter html",
+    "report-coveralls": "nyc report --reporter=text-lcov | coveralls"
   },
   "devDependencies": {
-    "browserify": "*",
-    "coveralls": "^2.11.2",
-    "eslint": "0.10.2",
-    "eslint-plugin-nodeca": "^1.0.0",
-    "istanbul": "*",
-    "lodash": "*",
+    "browserify": "^16.5.1",
+    "coveralls": "^3.1.0",
+    "eslint": "^7.1.0",
     "markdown-it": "markdown-it/markdown-it",
     "markdown-it-testgen": "~0.1.0",
-    "mocha": "*",
-    "request": "*",
-    "uglify-js": "*"
+    "mocha": "^7.2.0",
+    "nyc": "^15.1.0",
+    "terser": "^4.7.0"
   }
 }

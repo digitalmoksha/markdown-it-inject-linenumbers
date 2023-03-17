@@ -1,6 +1,5 @@
 'use strict';
 
-
 var path     = require('path');
 var generate = require('markdown-it-testgen');
 
@@ -8,7 +7,7 @@ var generate = require('markdown-it-testgen');
 
 describe('markdown-it-inject-linenumbers', function () {
   var md = require('markdown-it')()
-              .use(require('../'));
+    .use(require('../'));
 
   generate(path.join(__dirname, 'fixtures/linenumbers.txt'), md);
 });

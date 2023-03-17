@@ -2,7 +2,7 @@
   "name": "markdown-it-inject-linenumbers",
   "main": "dist/markdown-it-inject-linenumbers.js",
   "homepage": "https://github.com/digitalmoksha/markdown-it-inject-linenumbers",
-  "description": "Inject the line numbers to support sync scrolling",
+  "description": "Plugin to inject source line numbers to support sync scrolling",
   "keywords": [
     "markdown-it-plugin",
     "markdown-it",
